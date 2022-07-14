@@ -65,12 +65,6 @@
 
 ; (List comprehension)
 ; Calls the macro `for'
-(defn cartesianProduct [x y]
-  (for [a (x)
-        b (y)]
-    [a b]))
 
 
-(deftest test-product
-  (is (= 6 (count (cartesianProduct '(1 2 3) '(:i :j))))))
 
