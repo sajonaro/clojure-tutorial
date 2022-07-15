@@ -46,8 +46,6 @@
             (recur f2 (+ f1 f2) (inc i))))))
 
 
-
-
 (deftest test-fibonacci
   (is (= 13 (fib 6))))
 
