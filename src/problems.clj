@@ -24,18 +24,35 @@
   ;;      (recur (inc n) (cons r (fib n))))
 
 
-(defn fibseq [num]
-  (reduce #(conj %1 (fib %2)) () (range 1 (inc num))))
+(defn fibseq [nn]
+  (sort (reduce #(conj %1 (fib %2)) () (range 1 (inc nn)))))
 
 (->> (fibseq 40)
      (filter #(< % 4000000))
      (filter #(= 0 (mod % 2)))
      (reduce #(+ %1 %2) 0))
 
+;; What is the index of the first term in 
+;; the Fibonacci 
+;; sequence to contain 1000 digits?
+
+(defn has1000digits? [num]
+  (= 1000 (count (str num))))
 
 
 
+(defn prime? [n]
+  (loop [i 2]
+    (cond
+      (= i n) true
+      (and
+       (= 0 (mod n i))
+       (not= i n)) false
+      :else (recur (inc i)))))
 
 
-
-(conj () 1)
+(prime? 17)
+    
+  
+    
+  

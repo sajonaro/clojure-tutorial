@@ -41,13 +41,13 @@
 ;; 1 2 3 4 5 6
 (defn fib [n]
   (if (= n 1) 1
-      (loop [f1 0 f2 1 i 0]
+      (loop [f1 0 f2 1 i 1]
         (if (>= i n) f2
             (recur f2 (+ f1 f2) (inc i))))))
 
 
 (deftest test-fibonacci
-  (is (= 13 (fib 6))))
+  (is (= 8 (fib 6))))
 
 (deftest test2
   (is (= 21 (sum 6))))
