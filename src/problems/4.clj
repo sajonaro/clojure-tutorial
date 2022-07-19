@@ -23,4 +23,4 @@
 
 ((deftest palindrome-test
       (testing "Context of the test assertions"
-        (is (palindrome? '(123 321))))))
+        (is (palindrome? 123321)))))
