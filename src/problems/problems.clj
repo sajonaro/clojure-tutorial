@@ -1,4 +1,4 @@
-(ns problems
+(ns problems.problems
   (:require [functions :refer [fib]]))
 
 ;; If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -41,18 +41,6 @@
 
 
 
-(defn prime? [n]
-  (loop [i 2]
-    (cond
-      (= i n) true
-      (and
-       (= 0 (mod n i))
-       (not= i n)) false
-      :else (recur (inc i)))))
-
-
-(prime? 17)
-    
-  
+ 
     
   
