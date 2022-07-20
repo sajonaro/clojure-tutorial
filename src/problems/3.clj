@@ -4,10 +4,11 @@
 (defn prime? [n]
   (loop [i 2]
     (cond
+      (= 1 n) false
       (= i n) true
       (and
        (= 0 (mod n i))
-       (not= i n)) false
+       (not= n i)) false
       :else (recur (inc i)))))
 
 
@@ -36,3 +37,7 @@
         (recur (dec (dec i))))))
 
 ;;600851475143(largest-prime 600851475143 71)
+
+
+
+(prime? 11)
